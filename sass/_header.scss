@@ -1,0 +1,11 @@
+.header {
+    background-color: $color-primary;
+    grid-column: full-start/col-end 5;
+}
+
+.banner {
+    background-image: url(../img/bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column: col-start 6/full-end;
+}

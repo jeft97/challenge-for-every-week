@@ -1,0 +1,50 @@
+.about {
+    background-color: $color-white-2;
+    grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(42vw, 1fr));
+    &__photo {
+        width: 100%;
+        grid-column: 1/2;
+    }
+    &__icon {
+        height: 3.2vw;
+        align-self: flex-start;
+    }
+    &__text {
+        margin-bottom: 6rem;
+        text-align: justify;
+        letter-spacing: 1;
+        font-size: 1.9rem;
+        font-family: $font-display;
+    }
+    &__typography {
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 4rem;
+    }
+}
+
+.presetation {
+    background-color: $color-white-2;
+    grid-column: full-start/full-end;
+}
+
+.choose {
+    background-color: $color-white-2;
+    grid-column: full-start/full-end;
+}
+
+.testimonial {
+    background-image: linear-gradient( to right bottom, rgba($color-primary, .8), rgba($color-primary, .8)), url(../img/bg-dark.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20rem 10rem;
+    grid-column: full-start/full-end;
+}
+
+.contact {
+    background-color: $color-primary;
+    grid-column: full-start/full-end;
+}
