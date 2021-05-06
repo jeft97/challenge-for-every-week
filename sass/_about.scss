@@ -1,8 +1,15 @@
+%typography {
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 4vw;
+}
+
 .about {
     background-color: $color-white-2;
     grid-column: full-start/full-end;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(42vw, 1fr));
+    align-items: center;
     &__photo {
         width: 100%;
         grid-column: 1/2;
@@ -15,19 +22,37 @@
         margin-bottom: 6rem;
         text-align: justify;
         letter-spacing: 1;
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         font-family: $font-display;
     }
     &__typography {
-        display: flex;
-        flex-direction: column;
-        padding: 10rem 4rem;
+        @extend %typography;
     }
 }
 
 .presetation {
     background-color: $color-white-2;
     grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(42vw, 1fr));
+    align-items: center;
+    &__icon {
+        height: 6rem;
+        align-self: center
+    }
+    &__typography {
+        @extend %typography;
+    }
+    &__img {
+        width: 100%;
+    }
+    &__text {
+        margin-bottom: 4rem;
+        text-align: justify;
+        letter-spacing: 1;
+        font-size: 1.8rem;
+        font-family: $font-display;
+    }
 }
 
 .choose {
