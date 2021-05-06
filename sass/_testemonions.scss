@@ -1,0 +1,54 @@
+.testimonial {
+    background-image: linear-gradient( to right bottom, rgba($color-primary, .8), rgba($color-primary, .8)), url(../img/bg-dark.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20rem 10rem;
+    grid-column: full-start/full-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__avatar {
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 5rem;
+    }
+    &__text {
+        color: $color-white;
+        text-align: center;
+        font-family: $font-display;
+        font-size: 2rem;
+        font-style: italic;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+    &__name {
+        color: $color-white;
+        font-family: $font-display;
+        font-weight: bold;
+    }
+    &__change {
+        display: inline-flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+// btn slaid importante
+.btn-slaid {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $color-grey-light;
+    cursor: pointer;
+}
+
+.active {
+    background-color: $color-white-2;
+}
+
+.faq {
+    grid-column: full-start/full-end;
+}

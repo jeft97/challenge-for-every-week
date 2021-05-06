@@ -60,15 +60,6 @@
     grid-column: full-start/full-end;
 }
 
-.testimonial {
-    background-image: linear-gradient( to right bottom, rgba($color-primary, .8), rgba($color-primary, .8)), url(../img/bg-dark.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 20rem 10rem;
-    grid-column: full-start/full-end;
-}
-
 .contact {
     background-color: $color-primary;
     grid-column: full-start/full-end;
