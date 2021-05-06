@@ -58,6 +58,42 @@
 .choose {
     background-color: $color-white-2;
     grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(38vw, 1fr));
+    padding: 15rem 4rem;
+    grid-gap: 6rem;
+    &__photo {
+        justify-self: center;
+    }
+    &__link {
+        color: $color-primary;
+        font-size: 1.8rem;
+        font-style: italic;
+        font-family: $font-display;
+        font-weight: 400;
+        text-decoration: none;
+        text-decoration: underline;
+    }
+    &__text {
+        margin: 4rem 0;
+        text-align: justify;
+        letter-spacing: 1;
+        font-size: 1.8rem;
+        font-family: $font-display;
+    }
+    &__photo {
+        &--1 {
+            height: 35rem;
+            margin-right: -4px;
+            outline: 6px solid $color-primary;
+            outline-offset: .5rem;
+        }
+        &--2 {
+            height: 35rem;
+            transform: translate(-4rem, 11rem);
+            box-shadow: 0 1rem 5rem rgba($color-primary, .3);
+        }
+    }
 }
 
 .contact {

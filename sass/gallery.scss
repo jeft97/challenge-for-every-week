@@ -21,6 +21,16 @@
             font-size: 1.8rem;
         }
     }
+    &__icon {
+        height: 5rem;
+        margin-right: 2rem;
+    }
+    &__value {
+        color: $color-white;
+        font-size: 6rem;
+        font-family: $font-display;
+        font-weight: 400;
+    }
 }
 
 .figure {

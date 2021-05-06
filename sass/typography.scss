@@ -17,3 +17,23 @@
     font-style: italic;
     line-height: 1;
 }
+
+.heading-5 {
+    font-size: 5.6rem;
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+.heading-6 {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+}
+
+.cl-white {
+    color: $color-primary;
+    font-family: $font-display;
+}
+
+code {
+    font-size: 4rem;
+}
