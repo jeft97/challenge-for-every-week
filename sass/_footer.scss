@@ -1,4 +1,35 @@
 .footer {
     background-color: $color-primary;
     grid-column: full-start/full-end;
+    color: $color-white;
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, min-content));
+    grid-gap: 6rem;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 10rem 4rem 2rem 4rem;
+    font-size: 1.8rem;
+    font-family: $font-display;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        height: .1rem;
+        background-color: $color-grey-light;
+    }
+}
+
+.opening__list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    &--item {
+        list-style: none;
+    }
 }
