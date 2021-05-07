@@ -9,6 +9,12 @@
     grid-column: full-start/full-end;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(42vw, 1fr));
+    @include respond(tab-land) {
+        grid-template-columns: repeat(auto-fit, minmax(44vw, 1fr));
+    }
+    @include respond(tab-port) {
+        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+    }
     align-items: center;
     &__photo {
         width: 100%;
@@ -36,6 +42,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(42vw, 1fr));
     align-items: center;
+    @include respond(tab-land) {
+        grid-template-columns: repeat(auto-fit, minmax(44vw, 1fr));
+    }
+    @include respond(tab-port) {
+        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+    }
     &__icon {
         height: 6rem;
         align-self: center
@@ -45,6 +57,9 @@
     }
     &__img {
         width: 100%;
+        @include respond(tab-land) {
+            grid-row: 1/2;
+        }
     }
     &__text {
         margin-bottom: 4rem;
@@ -60,6 +75,9 @@
     grid-column: full-start/full-end;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(38vw, 1fr));
+    @include respond(tab-port) {
+        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+    }
     padding: 15rem 4rem;
     grid-gap: 6rem;
     &__photo {
@@ -85,8 +103,7 @@
         &--1 {
             height: 35rem;
             margin-right: -4px;
-            outline: 6px solid $color-primary;
-            outline-offset: .5rem;
+            box-shadow: 0 1rem 5rem rgba($color-primary, .3);
         }
         &--2 {
             height: 35rem;
@@ -139,6 +156,7 @@
         padding: 1.2rem 4rem;
         font-size: 1.7rem;
         text-transform: capitalize;
+        cursor: pointer;
     }
 }
 
