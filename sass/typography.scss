@@ -7,6 +7,9 @@
     align-self: center;
     z-index: 10;
     transform: translateX(2vw);
+    @include respond(big-desktop) {
+        transform: translateX(12vw);
+    }
     letter-spacing: .5rem;
     & span {
         margin-left: 2.5rem;
@@ -14,9 +17,19 @@
     }
     @include respond(tab-port) {
         font-size: 8rem;
-        transform: translateX(.5vw);
+        transform: translateX(8vw);
         & span {
             font-size: 10rem;
+        }
+    }
+    @include respond(phone) {
+        font-size: 5rem;
+        transform: translateX(0);
+        text-align: center;
+        grid-column: 2/4;
+        align-self: center;
+        & span {
+            font-size: 6rem;
         }
     }
 }
@@ -61,6 +74,9 @@
 .cl-white {
     color: $color-primary;
     font-family: $font-display;
+    @include respond(phone) {
+        font-size: 1.5rem;
+    }
 }
 
 code {

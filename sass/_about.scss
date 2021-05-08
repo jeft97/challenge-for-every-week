@@ -8,12 +8,13 @@
     background-color: $color-white-2;
     grid-column: full-start/full-end;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(42vw, 1fr));
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     @include respond(tab-land) {
-        grid-template-columns: repeat(auto-fit, minmax(44vw, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
     }
     @include respond(tab-port) {
-        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(60vw, 1fr));
     }
     align-items: center;
     &__photo {
@@ -23,6 +24,13 @@
     &__icon {
         height: 3.2vw;
         align-self: flex-start;
+        @include respond(tab-port) {
+            height: 4vw;
+        }
+        @include respond(phone) {
+            height: 8vw;
+            align-self: center;
+        }
     }
     &__text {
         margin-bottom: 6rem;
@@ -40,13 +48,14 @@
     background-color: $color-white-2;
     grid-column: full-start/full-end;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(42vw, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     align-items: center;
+    justify-content: center;
     @include respond(tab-land) {
-        grid-template-columns: repeat(auto-fit, minmax(44vw, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
     }
     @include respond(tab-port) {
-        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(60vw, 1fr));
     }
     &__icon {
         height: 6rem;
@@ -104,11 +113,26 @@
             height: 35rem;
             margin-right: -4px;
             box-shadow: 0 1rem 5rem rgba($color-primary, .3);
+            @include respond(phone) {
+                height: 40rem;
+                outline: 4px solid $color-primary;
+                outline-offset: 5px;
+            }
         }
         &--2 {
             height: 35rem;
             transform: translate(-4rem, 11rem);
             box-shadow: 0 1rem 5rem rgba($color-primary, .3);
+            @include respond(phone) {
+                display: none;
+            }
+        }
+        @include respond(tab-land) {
+            grid-row: 1/2;
+            margin-bottom: 19rem;
+        }
+        @include respond(phone) {
+            margin-bottom: 8rem;
         }
     }
 }
@@ -120,6 +144,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
     grid-gap: 11rem 4rem;
+    @include respond(tab-port) {
+        grid-template-rows: repeat(3, min-content);
+    }
+    @include respond(phone) {
+        padding: 10rem 4rem;
+    }
     &__date {
         display: grid;
         grid-template-rows: repeat(2, min-content);
@@ -147,6 +177,10 @@
         display: flex;
         flex-direction: column;
         gap: 4rem;
+        @include respond(tab-port) {
+            grid-row: 3/-1;
+            grid-column: 1/3;
+        }
     }
     &__btn {
         border: none;
@@ -157,6 +191,9 @@
         font-size: 1.7rem;
         text-transform: capitalize;
         cursor: pointer;
+        @include respond(phone) {
+            align-self: stretch;
+        }
     }
 }
 
@@ -168,11 +205,13 @@
     outline: 0;
     border-bottom: 1.9px solid $color-grey-light;
     color: $color-white;
-    font-size: 1.8rem;
+    font-size: 2rem;
     min-height: 5rem;
+    font-family: $font-display;
     &::placeholder {
         color: $color-white-2;
         text-transform: capitalize;
+        font-family: inherit;
     }
 }
 
@@ -193,6 +232,8 @@
     &__message {
         height: 20vh;
         resize: none;
+        font-family: $font-display;
+        font-size: 1.8rem;
         @extend %input;
     }
 }

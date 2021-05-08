@@ -2,6 +2,9 @@ const btnOpenFaq = document.querySelectorAll('.btn-open');
 const textForClose = document.querySelectorAll('.faq__text');
 const showContent = document.querySelector('.show');
 const removeBtn = document.querySelector('.removeBtn');
+const openMenu = document.querySelector('.sidebar__hambuger');
+const hidden = document.querySelector('.hidden');
+const menuMobile = document.querySelector('.menu__mobile');
 
 for (let i = 0; i < btnOpenFaq.length; i++) {
     btnOpenFaq[i].addEventListener('click', () => {
@@ -14,3 +17,14 @@ for (let i = 0; i < btnOpenFaq.length; i++) {
         }
     })
 }
+
+openMenu.addEventListener('click', () => {
+
+    if (menuMobile.classList.contains('hidden')) {
+        menuMobile.classList.remove('hidden');
+        document.body.style.overflow = "hidden";
+    } else {
+        menuMobile.classList.add('hidden');
+        document.body.style.overflow = "auto";
+    }
+})

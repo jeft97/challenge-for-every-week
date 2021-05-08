@@ -44,4 +44,7 @@ body {
         grid-template-rows: 10rem calc(100vh - 10rem) repeat(9, min-content);
         grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     }
+    @include respond(phone) {
+        grid-template-columns: [full-start] minmax(min-content, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(min-content, 1fr) [full-end];
+    }
 }
